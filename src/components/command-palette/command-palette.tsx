@@ -140,7 +140,7 @@ export function CommandPaletteProvider({ children }: { children: React.ReactNode
                     .map((tech) => tech.name)
                     .join(' · ')}
                 </Hint>
-                <ArrowUpRight size={14} className="ml-2 shrink-0 text-muted-foreground" />
+                <ArrowUpRight size={14} className="ml-auto shrink-0 text-muted-foreground sm:ml-2" />
               </Command.Item>
             ))}
           </Command.Group>
@@ -195,7 +195,7 @@ export function CommandPaletteProvider({ children }: { children: React.ReactNode
           </Command.Group>
         </Command.List>
 
-        <div className="flex items-center gap-4 border-t border-border px-4 py-2 text-[11px] text-muted-foreground">
+        <div className="hidden items-center gap-4 border-t border-border px-4 py-2 text-[11px] text-muted-foreground sm:flex">
           <span className="flex items-center gap-1.5">
             <Kbd>↑↓</Kbd> {t.palette.hintNavigate}
           </span>

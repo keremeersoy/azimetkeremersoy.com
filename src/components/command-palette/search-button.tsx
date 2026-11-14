@@ -14,7 +14,7 @@ export function SearchButton() {
     <button
       type="button"
       onClick={() => setOpen(true)}
-      className="flex w-full items-center gap-2 rounded-lg border border-border bg-background px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+      className="flex w-full items-center gap-2 rounded-lg border border-border bg-background px-2.5 py-3 text-sm lg:py-1.5 text-muted-foreground transition-colors hover:text-foreground"
     >
       <Search size={14} />
       <span>{t.search}</span>

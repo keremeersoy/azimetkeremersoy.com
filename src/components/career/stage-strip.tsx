@@ -32,7 +32,7 @@ export function StageStrip({ stages }: { stages: Stages }) {
               role="tab"
               aria-selected={selected}
               onClick={() => setActive(index)}
-              className="group text-left outline-none"
+              className="group self-start rounded-sm text-left outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
             >
               <span
                 className={cn(
@@ -53,7 +53,9 @@ export function StageStrip({ stages }: { stages: Stages }) {
                 {stage.label[lang]}
               </span>
               <span className="mt-0.5 block text-xs tabular-nums text-muted-foreground">
-                {formatMonth(stage.start, lang)} · {formatDuration(stage.start, stage.end, lang)}
+                <span className="block sm:inline">{formatMonth(stage.start, lang)}</span>
+                <span className="hidden sm:inline"> · </span>
+                <span className="block sm:inline">{formatDuration(stage.start, stage.end, lang)}</span>
               </span>
             </button>
           );

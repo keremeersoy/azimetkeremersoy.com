@@ -5,7 +5,7 @@ export function SectionLink({ href, children }: { href: string; children: React.
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+      className="-my-3 inline-flex items-center gap-1 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
     >
       {children} <ArrowRight size={14} />
     </Link>

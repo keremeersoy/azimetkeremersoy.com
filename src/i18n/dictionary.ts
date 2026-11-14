@@ -2,6 +2,11 @@ import type { Lang } from './config';
 
 const en = {
   role: 'Frontend Developer',
+  menu: 'Menu',
+  language: 'Language',
+  theme: 'Theme',
+  lightTheme: 'Light theme',
+  darkTheme: 'Dark theme',
   nav: { home: 'Home', experience: 'Experience', projects: 'Projects' },
   stackTitle: 'Stack',
   certsTitle: 'Certificates',
@@ -40,6 +45,11 @@ export type Dictionary = typeof en;
 
 const tr: Dictionary = {
   role: 'Frontend Developer',
+  menu: 'Menü',
+  language: 'Dil',
+  theme: 'Tema',
+  lightTheme: 'Açık tema',
+  darkTheme: 'Koyu tema',
   nav: { home: 'Ana Sayfa', experience: 'Deneyim', projects: 'Projeler' },
   stackTitle: 'Teknolojiler',
   certsTitle: 'Sertifikalar',

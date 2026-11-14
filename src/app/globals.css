@@ -55,6 +55,12 @@
   * {
     @apply border-border;
   }
+
+  /* Radix wraps scrollable content in `display: table`, which grows to fit its widest child and pushes
+     the page past the viewport on narrow screens. */
+  [data-radix-scroll-area-viewport] > div {
+    display: block !important;
+  }
   body {
     @apply bg-background text-foreground;
   }
@@ -120,4 +126,19 @@ html {
   cursor: pointer;
 }
 [cmdk-item][data-selected='true'] { background: hsl(var(--muted)); }
+@media (max-width: 639px) {
+  [cmdk-dialog] {
+    top: 8vh;
+  }
+  /* 16px keeps iOS Safari from zooming into the field on focus. */
+  [cmdk-input] {
+    font-size: 16px;
+  }
+  [cmdk-list] {
+    max-height: min(400px, 55vh);
+  }
+  [cmdk-item] {
+    min-height: 44px;
+  }
+}
 [cmdk-empty] { padding: 28px; text-align: center; font-size: 13px; color: hsl(var(--muted-foreground)); }

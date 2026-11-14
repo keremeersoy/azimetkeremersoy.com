@@ -8,16 +8,17 @@ import { useLang } from '@/i18n/provider';
 
 import { techIcons } from './tech-icons';
 
+// The negative margins enlarge the tap area without changing the layout.
 const linkClass =
-  'inline-flex items-center gap-0.5 text-sm text-muted-foreground transition-colors hover:text-foreground';
+  '-mx-2 -my-3 inline-flex items-center gap-0.5 px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground';
 
 export function ProjectCard({ project }: { project: Project }) {
   const { lang, t } = useLang();
 
   return (
     <article className="rounded-xl border border-border p-5">
-      <div className="flex items-start justify-between gap-4">
-        <h2 className="text-lg font-semibold tracking-tight">{project.title}</h2>
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+        <h2 className="min-w-0 break-words text-lg font-semibold tracking-tight">{project.title}</h2>
         <div className="flex shrink-0 gap-4 pt-1">
           {project.liveUrl && (
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>

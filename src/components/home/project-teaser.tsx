@@ -13,9 +13,7 @@ export function ProjectTeaser({ project }: { project: Project }) {
       <p className="mt-1.5 flex-1 text-[13px] leading-relaxed text-muted-foreground">{project.short[lang]}</p>
       <div className="mt-3 flex flex-wrap gap-1">
         {project.techStack.slice(0, 2).map((tech) => (
-          <Chip key={tech.name} className="text-[11px]">
-            {tech.name}
-          </Chip>
+          <Chip key={tech.name}>{tech.name}</Chip>
         ))}
       </div>
     </li>

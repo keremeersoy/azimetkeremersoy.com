@@ -1,9 +1,13 @@
 import type { Localized } from './types';
 
+export type CareerIcon = 'education' | 'freelance';
+
 export interface CareerEntry {
   id: string;
   heading: Localized;
   sub?: Localized;
+  /** Shown in place of a company logo. */
+  icon?: CareerIcon;
   org?: { name: string; url?: string; logo?: { src: string; width: number; height: number } };
   /** 'YYYY-MM'. `end: null` means ongoing. Year-only entries set `year` instead. */
   start?: string;
@@ -111,6 +115,7 @@ export const career: CareerEntry[] = [
   },
   {
     id: 'graduation',
+    icon: 'education',
     hideOnHome: true,
     homeRole: { en: 'Kırıkkale University', tr: 'Kırıkkale Üniversitesi' },
     heading: { en: 'Computer Engineering, B.Sc.', tr: 'Bilgisayar Mühendisliği, Lisans' },
@@ -202,6 +207,7 @@ export const career: CareerEntry[] = [
   },
   {
     id: 'freelance-start',
+    icon: 'freelance',
     homeRole: { en: 'Web projects for clients · YetGen', tr: 'Müşteriler için web projeleri · YetGen' },
     heading: { en: 'Freelance', tr: 'Freelance' },
     sub: { en: 'Web projects for clients', tr: 'Müşteriler için web projeleri' },

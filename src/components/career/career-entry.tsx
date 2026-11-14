@@ -1,11 +1,11 @@
 'use client';
 
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Code2, GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 
 import { Chip } from '@/components/common/chip';
 import { Reveal } from '@/components/common/reveal';
-import type { CareerEntry as CareerEntryData } from '@/content/career';
+import type { CareerEntry as CareerEntryData, CareerIcon } from '@/content/career';
 import { useLang } from '@/i18n/provider';
 
 import { BulletList } from './bullet-list';
@@ -14,10 +14,15 @@ import { StageStrip } from './stage-strip';
 
 export type CareerVariant = 'summary' | 'full';
 
+const ICONS: Record<CareerIcon, typeof Code2> = { education: GraduationCap, freelance: Code2 };
+
+const TILE_CLASS = 'flex size-10 shrink-0 items-center justify-center rounded-xl border border-border';
+
 /** `summary` is the compact home-page version; `full` is the Experience page. */
 export function CareerEntry({ entry, variant }: { entry: CareerEntryData; variant: CareerVariant }) {
   const { lang } = useLang();
   const isFull = variant === 'full';
+  const Icon = entry.icon ? ICONS[entry.icon] : null;
   const dates = getEntryDates(entry, lang);
   const role = isFull ? entry.sub : (entry.homeRole ?? entry.sub);
   // In the full view, entries with stages show them in the strip instead of the bullets.
@@ -53,8 +58,8 @@ export function CareerEntry({ entry, variant }: { entry: CareerEntryData; varian
 
       <div className="min-w-0">
         <div className="flex items-center gap-3">
-          {entry.org?.logo && (
-            <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-1.5">
+          {entry.org?.logo ? (
+            <span className={`${TILE_CLASS} bg-white p-1.5`}>
               <Image
                 src={entry.org.logo.src}
                 alt=""
@@ -63,6 +68,12 @@ export function CareerEntry({ entry, variant }: { entry: CareerEntryData; varian
                 className="max-h-full w-auto object-contain"
               />
             </span>
+          ) : (
+            Icon && (
+              <span className={`${TILE_CLASS} bg-muted text-muted-foreground`}>
+                <Icon size={18} aria-hidden />
+              </span>
+            )
           )}
           <div className="min-w-0">
             <h3 className="text-[17px] font-semibold leading-tight tracking-[-0.02em]">{name}</h3>
@@ -94,7 +105,7 @@ export function CareerEntry({ entry, variant }: { entry: CareerEntryData; varian
   );
 
   return (
-    <li id={entry.id} className="scroll-mt-10">
+    <li id={entry.id} className="scroll-mt-20">
       {isFull ? <Reveal>{content}</Reveal> : content}
     </li>
   );

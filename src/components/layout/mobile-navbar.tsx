@@ -32,12 +32,18 @@ export function MobileNavbar() {
 
         <Drawer open={isOpen} onOpenChange={setIsOpen}>
           <DrawerTrigger asChild>
-            <Button variant="ghost" size="icon" title="Toggle drawer" onClick={() => setIsOpen(!isOpen)}>
-              <Menu size={16} />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="size-11"
+              aria-label={t.menu}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <Menu size={20} aria-hidden />
             </Button>
           </DrawerTrigger>
           <DrawerContent className="h-4/5">
-            <DialogTitle className="sr-only">Menu</DialogTitle>
+            <DialogTitle className="sr-only">{t.menu}</DialogTitle>
             <div className="overflow-y-auto p-4">
               <SidebarContent className="flex w-full flex-col text-sm" onNavigate={() => setIsOpen(false)} />
             </div>

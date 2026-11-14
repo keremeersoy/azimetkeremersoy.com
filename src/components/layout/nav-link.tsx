@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 
-const baseClass = 'flex items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-sm transition-colors';
+const baseClass = 'flex items-center justify-between gap-2 rounded-lg px-2.5 py-3 text-sm transition-colors lg:py-1.5';
 
 interface NavLinkProps {
   href: string;

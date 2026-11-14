@@ -20,7 +20,7 @@ function ProfileButton({ href, label, icon, className }: ProfileButtonProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium ${className}`}
+      className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium sm:px-3.5 sm:py-2 ${className}`}
     >
       {icon}
       {label}

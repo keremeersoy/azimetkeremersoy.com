@@ -1,5 +1,5 @@
 export function Hint({ children }: { children: React.ReactNode }) {
-  return <span className="ml-auto truncate pl-4 text-xs text-muted-foreground">{children}</span>;
+  return <span className="ml-auto hidden truncate pl-4 text-xs text-muted-foreground sm:inline">{children}</span>;
 }
 
 export function Kbd({ children }: { children: React.ReactNode }) {
