@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site';
 
 const defaultMetadata: Partial<Metadata> = {
-  metadataBase: new URL('https://azimetkeremersoy.tech'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Azimet Kerem Ersoy | Web Developer & Software Engineer',
     template: '%s | Azimet Kerem Ersoy',
@@ -12,7 +13,7 @@ const defaultMetadata: Partial<Metadata> = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://azimetkeremersoy.tech',
+    url: SITE_URL,
     siteName: 'Azimet Kerem Ersoy',
     images: [
       {

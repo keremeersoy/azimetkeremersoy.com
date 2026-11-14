@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseURL = 'https://azimetkeremersoy.tech';
+  const baseURL = SITE_URL;
 
   const routes = ['', '/experience', '/projects'].map((route) => ({
     url: `${baseURL}${route}`,

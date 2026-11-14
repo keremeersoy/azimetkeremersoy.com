@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import { SITE_URL } from '@/lib/site';
 
 import './globals.css';
 import Sidebar from '@/components/sidebar';
@@ -10,7 +11,7 @@ import Navbar from '@/components/navbar';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://azimetkeremersoy.tech'),
+  metadataBase: new URL(SITE_URL),
   title: 'Azimet Kerem Ersoy | Web Developer & Software Engineer',
   description:
     'Full-stack web developer specializing in Next.js, TypeScript, and modern web technologies. Check out my portfolio, projects and experience.',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://azimetkeremersoy.tech',
+    url: SITE_URL,
     siteName: 'Azimet Kerem Ersoy',
     title: 'Azimet Kerem Ersoy | Web Developer & Software Engineer',
     description:
