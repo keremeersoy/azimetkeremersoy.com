@@ -335,7 +335,7 @@ export const projects_data: Project[] = [
     id: 2,
     title: "azimetkeremersoy.com",
     liveUrl: SITE_URL,
-    githubUrl: "https://github.com/keremeersoy/azimetkeremersoy.tech",
+    githubUrl: "https://github.com/keremeersoy/azimetkeremersoy.com",
     description: `
       This project is a personal portfolio website that I developed to showcase my professional experience, skills, and projects. The site features a clean, modern design a responsive layout. It includes sections for an introduction, experience, projects, and contact information. The site is built using Next.js and Tailwind CSS and is hosted on Vercel. The project is open source, and the code is available on GitHub.
       `,
