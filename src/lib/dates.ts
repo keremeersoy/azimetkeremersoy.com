@@ -1,4 +1,4 @@
-import type { Lang } from '@/lib/i18n';
+import type { Lang } from '@/i18n/config';
 
 type YM = string; // "YYYY-MM"
 

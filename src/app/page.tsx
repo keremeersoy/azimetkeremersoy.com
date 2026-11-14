@@ -1,24 +1,12 @@
-import { HomeContent } from '@/components/home-content';
-import type { Metadata } from 'next';
-import defaultMetadata from './metadata';
-import { personSchema, websiteSchema } from '@/lib/schema';
 import Script from 'next/script';
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  openGraph: {
-    ...defaultMetadata.openGraph,
-    description:
-      'Full-stack web developer specializing in Next.js, TypeScript, and modern web technologies. Experienced in building responsive and scalable web applications.',
-  },
-  twitter: {
-    ...defaultMetadata.twitter,
-    description:
-      'Full-stack web developer specializing in Next.js, TypeScript, and modern web technologies. Experienced in building responsive and scalable web applications.',
-  },
-};
+import { HomePage } from '@/components/home/home-page';
+import { homeMetadata } from '@/lib/metadata';
+import { personSchema, websiteSchema } from '@/lib/schema';
 
-export default function Home() {
+export const metadata = homeMetadata;
+
+export default function Page() {
   return (
     <>
       <Script
@@ -31,7 +19,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-      <HomeContent />
+      <HomePage />
     </>
   );
 }
