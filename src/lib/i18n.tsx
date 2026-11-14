@@ -2,7 +2,9 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
-export type Lang = 'en' | 'tr';
+import { LANG_COOKIE, type Lang } from '@/lib/lang';
+
+export type { Lang };
 
 const dictionary = {
   en: {
@@ -104,31 +106,18 @@ export type Dictionary = (typeof dictionary)[Lang];
 type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: Dictionary };
 const LangContext = createContext<Ctx | null>(null);
 
-const STORAGE_KEY = 'lang';
+const ONE_YEAR = 60 * 60 * 24 * 365;
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('en');
-
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved === 'en' || saved === 'tr') {
-        setLangState(saved);
-      } else if (navigator.language?.toLowerCase().startsWith('tr')) {
-        setLangState('tr');
-      }
-    } catch {}
-  }, []);
+export function LanguageProvider({ initialLang, children }: { initialLang: Lang; children: React.ReactNode }) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const setLang = useCallback((l: Lang) => {
-    setLangState(l);
-    try {
-      localStorage.setItem(STORAGE_KEY, l);
-    } catch {}
+  const setLang = useCallback((next: Lang) => {
+    setLangState(next);
+    document.cookie = `${LANG_COOKIE}=${next}; path=/; max-age=${ONE_YEAR}; samesite=lax`;
   }, []);
 
   const value = useMemo(() => ({ lang, setLang, t: dictionary[lang] }), [lang, setLang]);

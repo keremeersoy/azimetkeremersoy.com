@@ -10,6 +10,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { LanguageProvider } from '@/lib/i18n';
+import { getRequestLang } from '@/lib/lang-server';
 import { CommandPaletteProvider } from '@/components/command-palette';
 
 export const metadata: Metadata = {
@@ -63,8 +64,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = getRequestLang();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className={cn('h-screen w-full flex', GeistSans.className)}>
         <ThemeProvider
           attribute="class"
@@ -72,7 +75,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <LanguageProvider>
+        <LanguageProvider initialLang={lang}>
         <CommandPaletteProvider>
         <Sidebar />
 
