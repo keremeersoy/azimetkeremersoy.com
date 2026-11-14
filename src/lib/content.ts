@@ -25,11 +25,11 @@ export const homeAbout: Record<Lang, { lead: string; body: string[]; closing: st
   tr: {
     lead: "Ankara'da çalışan bir **bilgisayar mühendisi** ve **frontend developer**'ım.",
     body: [
-      "**2021**'den beri web için geliştiriyorum: önce freelance, sonra bir startup'ta. Bugün **Jotform**'un **Enterprise Growth** tarafında tam zamanlı Frontend Developer olarak growth işi yapıyorum: **A/B testleri, dönüşüm oranları ve lead üretimi**. 2024'te katıldım ve stajyerlikten tam zamanlıya büyüdüm.",
-      "Öncesinde 6 kişilik bir startup olan **Pepteam**'de tek web geliştiriciydim; film ve televizyon profesyonelleri için canlıda ve aktif kullanılan **SetCrews** platformunu geliştirdim. Ayrıca **GDSC KKU**'da web ekibine liderlik ettim.",
+      "Web geliştirmeye **2021**'de başladım; önce freelance çalıştım, sonra bir startup'ta yer aldım. Bugün **Jotform**'un **Enterprise Growth** tarafında tam zamanlı frontend developer olarak çalışıyorum. İşim growth odaklı: **A/B testleri, dönüşüm oranları ve lead üretimi**. Buraya 2024'te stajyer olarak girdim, şimdi aynı yerde tam zamanlıyım.",
+      "Daha önce 6 kişilik bir startup olan **Pepteam**'de tek web geliştiriciydim. Film ve televizyon sektörü için yaptığım **SetCrews** platformu da hâlâ canlıda ve kullanılıyor. Bunların yanında **GDSC KKU**'da web ekibini yönettim.",
     ],
     closing:
-      'Merakım beni sürekli öğrenmeye itiyor, kodun dışında ise yeni yerler keşfetmeyi seviyorum. Yeni iş birliklerine her zaman açığım; aklında bir proje varsa ya da sadece sohbet etmek istersen yaz.',
+      "Yeni şeyler öğrenmeyi seviyorum, kod dışında da yeni yerler keşfetmeyi. Aklında bir proje varsa ya da sadece sohbet etmek istersen yaz.",
   },
 };
 
@@ -90,20 +90,20 @@ export const career: CareerEntry[] = [
     end: null,
     lead: {
       en: 'I work on the Enterprise Growth side. The goal is to bring more customers and better leads to Jotform Enterprise, and to measure how every change affects conversion.',
-      tr: "Enterprise Growth tarafında çalışıyorum. Amaç, Jotform Enterprise'a daha fazla müşteri ve daha nitelikli lead getirmek ve her değişikliğin dönüşüme etkisini ölçmek.",
+      tr: "Enterprise Growth tarafında çalışıyorum. Hedefimiz, Jotform Enterprise'a daha fazla müşteri ve daha nitelikli lead kazandırmak; yaptığımız her değişikliğin dönüşüme etkisini de ölçüyoruz.",
     },
     bullets: [
       {
         en: 'I run A/B tests for Enterprise growth and measure how each change affects conversion rates.',
-        tr: 'Enterprise growth için A/B testleri yürütüyor ve her değişikliğin dönüşüm oranlarına etkisini ölçüyorum.',
+        tr: "Enterprise growth kapsamında A/B testleri kuruyor, her değişikliğin dönüşüm oranına etkisini ölçüyorum.",
       },
       {
         en: 'I build landing pages for different industries pixel-perfect from Figma designs and ship them through CI/CD, to increase lead volume and quality.',
-        tr: "Farklı sektörlere yönelik landing page'leri Figma tasarımlarından birebir geliştiriyor, CI/CD ile yayına alıyorum; amaç lead sayısını ve kalitesini artırmak.",
+        tr: "Farklı sektörlere özel landing page'leri Figma tasarımlarından birebir kodlayıp CI/CD ile yayına alıyorum. Amaç, lead sayısını ve kalitesini artırmak.",
       },
       {
         en: 'I improve form experience and performance to turn more visitors into leads, and build internal tools for the team.',
-        tr: 'Daha fazla ziyaretçiyi lead’e çevirmek için form deneyimini ve performansını iyileştiriyor, ekip için dahili araçlar geliştiriyorum.',
+        tr: "Daha çok ziyaretçiyi lead'e dönüştürmek için form deneyimini ve performansını iyileştiriyorum. Ekip için şirket içi araçlar da geliştiriyorum.",
       },
     ],
     stages: [
@@ -114,15 +114,15 @@ export const career: CareerEntry[] = [
         bullets: [
           {
             en: 'Run A/B tests for Enterprise growth and measure how each change affects conversion rates.',
-            tr: 'Enterprise growth için A/B testleri yürütüyor ve her değişikliğin dönüşüm oranlarına etkisini ölçüyorum.',
+            tr: "Enterprise growth kapsamında A/B testleri kuruyor, her değişikliğin dönüşüm oranına etkisini ölçüyorum.",
           },
           {
             en: 'Build landing pages for different industries pixel-perfect from Figma designs and ship them through CI/CD, to increase lead volume and quality.',
-            tr: "Farklı sektörlere yönelik landing page'leri Figma tasarımlarından birebir geliştiriyor, CI/CD ile yayına alıyorum; amaç lead sayısını ve kalitesini artırmak.",
+            tr: "Farklı sektörlere özel landing page'leri Figma tasarımlarından birebir kodlayıp CI/CD ile yayına alıyorum. Amaç, lead sayısını ve kalitesini artırmak.",
           },
           {
             en: 'Improve form experience and performance to turn more visitors into leads, and build internal tools for the team. Based in the Ankara office.',
-            tr: 'Daha fazla ziyaretçiyi lead’e çevirmek için form deneyimini ve performansını iyileştiriyor, ekip için dahili araçlar geliştiriyorum. Ankara ofisinde çalışıyorum.',
+            tr: "Daha çok ziyaretçiyi lead'e dönüştürmek için form deneyimini ve performansını iyileştiriyorum. Ekip için şirket içi araçlar da geliştiriyorum. Ankara ofisinde çalışıyorum.",
           },
         ],
       },
@@ -133,15 +133,15 @@ export const career: CareerEntry[] = [
         bullets: [
           {
             en: "Worked remotely on the Enterprise Growth side alongside my degree. Ran the A/B testing lifecycle: implemented, ran and analyzed tests with Jotform's inline packages to raise conversion rates.",
-            tr: "Okulumun yanında Enterprise Growth tarafında uzaktan çalıştım. A/B test sürecini yürüttüm: Jotform'un inline paketleriyle testleri uyguladım, çalıştırdım ve dönüşüm oranlarını artırmak için analiz ettim.",
+            tr: "Okulun yanında Enterprise Growth tarafında uzaktan çalıştım. A/B test sürecinin tamamında yer aldım: Jotform'un inline paketleriyle testleri kurdum, yayına aldım ve dönüşüm oranını artırmak için sonuçları analiz ettim.",
           },
           {
             en: 'Built pixel-perfect landing pages from Figma designs through a strict CI/CD pipeline, following Git and GitHub version-control standards.',
-            tr: 'Figma tasarımlarından birebir landing page’ler geliştirdim; süreç, Git ve GitHub standartlarıyla katı bir CI/CD hattından geçti.',
+            tr: "Figma tasarımlarından birebir landing page'ler geliştirdim. Süreç, Git ve GitHub kurallarına uyan sıkı bir CI/CD hattından geçiyordu.",
           },
           {
             en: 'Developed targeted campaign assets and features to attract Enterprise clients and generate leads, plus internal tools and dashboards that streamlined company operations.',
-            tr: 'Enterprise müşterilerini çekmeye ve lead üretmeye yönelik hedefli kampanya varlıkları ve özellikleri, ayrıca şirket operasyonlarını hızlandıran dahili araçlar ve dashboardlar geliştirdim.',
+            tr: "Enterprise müşterisi çekmeye ve lead üretmeye yönelik kampanya içerikleri ve özellikler geliştirdim. Bunun yanında şirket içi araçlar ve dashboard'lar yaptım.",
           },
         ],
       },
@@ -152,11 +152,11 @@ export const career: CareerEntry[] = [
         bullets: [
           {
             en: 'With a 4-person team, built an interface that lets the marketing team create and customize assets without developer help.',
-            tr: '4 kişilik bir ekiple, pazarlama ekibinin geliştirici desteği olmadan içerik üretip özelleştirebildiği bir arayüz geliştirdik.',
+            tr: "4 kişilik bir ekiple, pazarlama ekibinin geliştiriciye ihtiyaç duymadan içerik hazırlayıp özelleştirebildiği bir arayüz geliştirdik.",
           },
           {
             en: "Learned Jotform's proprietary technologies alongside the tools I already knew.",
-            tr: "Zaten bildiğim araçların yanında Jotform'un kendi geliştirdiği teknolojilerle çalışmayı öğrendim.",
+            tr: "Zaten bildiğim araçlara ek olarak Jotform'un kendi teknolojileriyle çalışmayı öğrendim.",
           },
         ],
       },
@@ -183,21 +183,21 @@ export const career: CareerEntry[] = [
     bullets: [
       {
         en: 'As the sole web developer, I built an admin dashboard for business owners and a super admin panel for app administrators.',
-        tr: 'Ekibin tek web geliştiricisi olarak işletme sahipleri için yönetim paneli ve uygulama yöneticileri için süper admin paneli geliştirdim.',
+        tr: "Ekibin tek web geliştiricisi olarak işletme sahipleri için bir yönetim paneli, uygulama yöneticileri için de süper admin paneli geliştirdim.",
       },
       {
         en: 'I built an internal website for managing content in the [Parently](https://parentlyai.com/) mobile app and integrated the app with the web.',
-        tr: '[Parently](https://parentlyai.com/) mobil uygulamasının içerik yönetimi için dahili bir web sitesi yaptım ve uygulamayı web ile entegre ettim.',
+        tr: "[Parently](https://parentlyai.com/) mobil uygulamasının içeriklerini yönetmek için şirket içi bir web sitesi yaptım ve uygulamayı web ile entegre ettim.",
       },
     ],
     more: [
       {
         en: 'Business owners use the dashboard to manage employee statistics, tasks, shifts and feedback.',
-        tr: 'İşletme sahipleri panel üzerinden çalışan istatistiklerini, görevleri, vardiyaları ve geri bildirimleri yönetiyor.',
+        tr: "İşletme sahipleri panelden çalışanlarının istatistiklerini, görevlerini, vardiyalarını ve geri bildirimlerini yönetiyor.",
       },
       {
         en: 'The super admin panel lets administrators access and manage all users across the app.',
-        tr: 'Süper admin paneli, yöneticilerin uygulamadaki tüm kullanıcılara erişip yönetmesini sağlıyor.',
+        tr: "Süper admin paneli, yöneticilerin uygulamadaki tüm kullanıcılara ulaşıp yönetmesini sağlıyor.",
       },
     ],
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'Material UI', 'Redux Toolkit', 'Firebase', 'Paddle'],
@@ -213,18 +213,18 @@ export const career: CareerEntry[] = [
     note: { en: 'Volunteer', tr: 'Gönüllü' },
     lead: {
       en: 'The club was established with the start of the 2022 academic year.',
-      tr: 'Kulüp, 2022 akademik yılının başlamasıyla kuruldu.',
+      tr: "Kulüp, 2022'de akademik yılın başlamasıyla kuruldu.",
     },
     bullets: [
       {
         en: 'I led a team of developers, gave talks and presentations, and ran YouTube live sessions on web development.',
-        tr: 'Geliştirici ekibine liderlik ettim; web geliştirme üzerine sunumlar yaptım, YouTube canlı yayınları düzenledim.',
+        tr: "Geliştiricilerden oluşan bir ekibe liderlik ettim; web geliştirme üzerine sunumlar yaptım, YouTube'da canlı yayınlar düzenledim.",
       },
     ],
     more: [
       {
         en: 'Helped teammates and community members explore new technologies and best practices, and learned from them in return.',
-        tr: 'Ekip arkadaşlarımın ve topluluk üyelerinin yeni teknolojileri ve en iyi pratikleri keşfetmesine yardım ettim, karşılığında onlardan da öğrendim.',
+        tr: "Ekip arkadaşlarımın ve topluluktakilerin yeni teknolojileri ve iyi uygulamaları öğrenmesine destek oldum, ben de onlardan çok şey öğrendim.",
       },
     ],
   },
@@ -238,18 +238,18 @@ export const career: CareerEntry[] = [
     end: '2023-01',
     lead: {
       en: 'My first freelance project, built at the request of director Sacit Altun.',
-      tr: 'İlk freelance projem; yönetmen Sacit Altun’un isteğiyle geliştirdim.',
+      tr: "İlk freelance projem. Yönetmen Sacit Altun'un isteğiyle geliştirdim.",
     },
     bullets: [
       {
         en: 'I was the sole developer of a platform where film and TV professionals connect and hold job interviews. It is live and actively used.',
-        tr: 'Film ve televizyon profesyonellerinin bağlantı kurup iş görüşmesi yaptığı bir platformun tek geliştiricisiydim. Canlıda ve aktif olarak kullanılıyor.',
+        tr: "Film ve televizyon profesyonellerinin tanışıp iş görüşmesi yapabildiği bir platformun tek geliştiricisiydim. Platform şu an canlıda ve kullanılıyor.",
       },
     ],
     more: [
       {
         en: 'Kept improving the platform with new features based on user feedback.',
-        tr: 'Kullanıcı geri bildirimlerine göre platformu yeni özelliklerle geliştirmeyi sürdürdüm.',
+        tr: "Kullanıcı geri bildirimlerine göre platforma yeni özellikler eklemeye devam ettim.",
       },
     ],
     tags: ['Next.js', 'tRPC', 'TypeScript', 'Tailwind CSS', 'Prisma', 'MySQL', 'NextAuth', 'iyzico'],
@@ -263,25 +263,33 @@ export const career: CareerEntry[] = [
     bullets: [
       {
         en: 'Started taking on web projects for clients while studying.',
-        tr: 'Okurken müşteriler için web projeleri almaya başladım.',
+        tr: "Okurken müşteriler için web projeleri yapmaya başladım.",
       },
       {
         en: 'Completed [YetGen](https://yetkingencler.com/), a 12-week program led by Prof. Dr. Erhan Erkut: algorithm development, teamwork and social innovation.',
-        tr: "Prof. Dr. Erhan Erkut'un yürüttüğü 12 haftalık [YetGen](https://yetkingencler.com/) programını tamamladım: algoritma geliştirme, ekip çalışması ve sosyal inovasyon.",
+        tr: "Prof. Dr. Erhan Erkut'un yürüttüğü 12 haftalık [YetGen](https://yetkingencler.com/) programını tamamladım. Programda algoritma geliştirme, ekip çalışması ve sosyal inovasyon üzerine çalıştık.",
       },
     ],
     more: [
       {
         en: 'The program also covered presentation techniques, career planning and the GirişGen process.',
-        tr: 'Program ayrıca sunum teknikleri, kariyer planlama ve GirişGen sürecini de kapsadı.',
+        tr: "Program ayrıca sunum teknikleri, kariyer planlama ve GirişGen sürecini de içeriyordu.",
       },
     ],
   },
 ];
 
-export const certificates: { name: string; org: string; date: L }[] = [
-  { name: 'YetGen', org: 'Yetkin Gençler', date: { en: 'Dec 2021', tr: 'Ara 2021' } },
-  { name: 'Arduino Level 2 (IoT)', org: 'Mustafa Akgül Free Software Camp', date: { en: 'Jan 2020', tr: 'Oca 2020' } },
+export const certificates: { name: L; org: L; date: L }[] = [
+  {
+    name: { en: 'YetGen', tr: 'YetGen' },
+    org: { en: 'Yetkin Gençler', tr: 'Yetkin Gençler' },
+    date: { en: 'Dec 2021', tr: 'Ara 2021' },
+  },
+  {
+    name: { en: 'Arduino Level 2 (IoT)', tr: 'Arduino 2. Düzey (IoT)' },
+    org: { en: 'Mustafa Akgül Free Software Camp', tr: 'Mustafa Akgül Özgür Yazılım Kampı' },
+    date: { en: 'Jan 2020', tr: 'Oca 2020' },
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -299,28 +307,28 @@ export const projectCopy: Record<number, ProjectCopy> = {
   1: {
     short: {
       en: 'A platform that connects people in need with clothing others give away for free or cheaply.',
-      tr: 'İhtiyacı olanları, ücretsiz ya da uygun fiyata verilen kıyafetlerle buluşturan platform.',
+      tr: "İhtiyacı olanları, ücretsiz ya da uygun fiyata verilen kıyafetlerle buluşturan bir platform.",
     },
     lead: {
       en: 'A platform that connects people in need with clothing others give away for free or at an affordable price.',
-      tr: 'İhtiyacı olan kişileri, başkalarının ücretsiz ya da uygun fiyata verdiği kıyafetlerle buluşturan bir platform.',
+      tr: "İhtiyacı olan kişilerin, başkalarının ücretsiz ya da uygun fiyata verdiği kıyafetlere ulaşmasını sağlayan bir platform.",
     },
     bullets: [
       {
         en: 'Create listings after registering, with images, titles, descriptions and product details.',
-        tr: 'Kayıt olduktan sonra görsel, başlık, açıklama ve ürün detaylarıyla ilan oluşturma.',
+        tr: "Kayıt olan kullanıcılar görsel, başlık, açıklama ve ürün bilgileriyle ilan açabiliyor.",
       },
       {
         en: 'Publish your own listings or save others to find them later.',
-        tr: 'Kendi ilanlarını yayınlama ya da başkalarının ilanlarını sonra bakmak üzere kaydetme.',
+        tr: "Kendi ilanlarını yayınlayabiliyor, beğendiği ilanları sonradan bakmak için kaydedebiliyor.",
       },
       {
         en: 'Public one-question-one-answer Q&A between buyers and sellers under each listing.',
-        tr: 'Her ilanın altında alıcı ve satıcı arasında herkese açık, tek soru tek cevap formatında soru-cevap.',
+        tr: "Her ilanın altında alıcılar satıcıya herkese açık soru sorabiliyor. Satıcı her soruya tek bir cevap veriyor.",
       },
       {
         en: 'Built for the Project 2 course at Kırıkkale University.',
-        tr: 'Kırıkkale Üniversitesi Proje 2 dersi kapsamında geliştirildi.',
+        tr: "Kırıkkale Üniversitesi'ndeki Proje 2 dersi kapsamında geliştirildi.",
       },
     ],
   },
@@ -328,38 +336,38 @@ export const projectCopy: Record<number, ProjectCopy> = {
   2: {
     short: {
       en: 'This portfolio, with dark mode, English and Turkish and a ⌘K palette. Open source.',
-      tr: 'Bu portfolyo: koyu tema, EN/TR ve ⌘K paleti ile. Açık kaynak.',
+      tr: "Bu portfolyo. Koyu tema, Türkçe/İngilizce ve ⌘K paleti var; açık kaynak.",
     },
     lead: {
       en: 'This portfolio: where I show my professional experience, skills and projects.',
-      tr: 'Bu portfolyo: profesyonel deneyimimi, becerilerimi ve projelerimi gösterdiğim yer.',
+      tr: "Bu portfolyo: deneyimlerimi, becerilerimi ve projelerimi sergilediğim site.",
     },
     bullets: [
       {
         en: 'Clean, modern and responsive, with dark mode, English and Turkish, and a ⌘K command palette.',
-        tr: 'Temiz, modern ve responsive; koyu tema, İngilizce ve Türkçe dil desteği ve ⌘K komut paleti ile.',
+        tr: "Temiz, modern ve mobil uyumlu. Koyu tema, Türkçe ve İngilizce dil desteği ve ⌘K komut paleti var.",
       },
-      { en: 'Hosted on Vercel; open source on GitHub.', tr: "Vercel'de yayında; GitHub'da açık kaynak." },
+      { en: 'Hosted on Vercel; open source on GitHub.', tr: "Vercel'de yayında, kodu GitHub'da açık." },
     ],
   },
   // azy-stack
   3: {
     short: {
       en: 'Full-stack starter on Next.js 16 and React 19 with auth, database and forms ready.',
-      tr: 'Next.js 16 ve React 19 ile full-stack şablon: auth, veritabanı ve formlar hazır.',
+      tr: "Next.js 16 ve React 19 ile hazırladığım full-stack başlangıç şablonu. Kimlik doğrulama, veritabanı ve formlar hazır.",
     },
     lead: {
       en: 'A robust, modern full-stack starter template built with Next.js 16, React 19 and Tailwind CSS 4.',
-      tr: 'Next.js 16, React 19 ve Tailwind CSS 4 ile geliştirilmiş sağlam, modern bir full-stack başlangıç şablonu.',
+      tr: "Next.js 16, React 19 ve Tailwind CSS 4 ile hazırladığım, sağlam ve modern bir full-stack başlangıç şablonu.",
     },
     bullets: [
       {
         en: 'Pre-configured with industry-standard tools for authentication, database management, form handling and UI components.',
-        tr: 'Kimlik doğrulama, veritabanı yönetimi, form yönetimi ve UI bileşenleri için sektör standardı araçlarla hazır geliyor.',
+        tr: "Kimlik doğrulama, veritabanı, form yönetimi ve arayüz bileşenleri için sektörün standart araçlarıyla önceden kurulu geliyor.",
       },
       {
         en: 'Lets you focus on building features immediately.',
-        tr: 'Doğrudan özellik geliştirmeye odaklanmanı sağlıyor.',
+        tr: "Kurulumla uğraşmadan doğrudan özellik geliştirmeye başlayabilirsin.",
       },
     ],
   },

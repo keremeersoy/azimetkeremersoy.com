@@ -16,10 +16,10 @@ export function ExperiencePage() {
         <h2 className="mb-4 text-[13px] font-semibold">{t.certsTitle}</h2>
         <ul className="flex flex-col divide-y divide-border">
           {certificates.map((c) => (
-            <li key={c.name} className="flex items-baseline justify-between gap-4 py-2.5 text-sm">
+            <li key={c.name.en} className="flex items-baseline justify-between gap-4 py-2.5 text-sm">
               <span>
-                <span className="font-medium">{c.name}</span>
-                <span className="text-muted-foreground"> · {c.org}</span>
+                <span className="font-medium">{c.name[lang]}</span>
+                <span className="text-muted-foreground"> · {c.org[lang]}</span>
               </span>
               <span className="text-xs tabular-nums text-muted-foreground">{c.date[lang]}</span>
             </li>
