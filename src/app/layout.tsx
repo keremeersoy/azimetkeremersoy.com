@@ -9,6 +9,8 @@ import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { LanguageProvider } from '@/lib/i18n';
+import { CommandPaletteProvider } from '@/components/command-palette';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -70,6 +72,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+        <LanguageProvider>
+        <CommandPaletteProvider>
         <Sidebar />
 
         <div className="w-full h-full">
@@ -78,15 +82,15 @@ export default function RootLayout({
           <div className="w-full mx-auto h-full">
             <ScrollArea className="h-full max-h-dynamic-screen min-h-dynamic-screen overflow-y-auto overflow-x-hidden relative flex w-full flex-col">
               <div className="z-[1] w-full px-6 pb-32 pt-8 lg:px-8 lg:py-24">
-                <div className="mx-auto w-full lg:mb-0 lg:max-w-3xl">
-                  <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(var(--dot-color)_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
+                <div className="mx-auto w-full lg:mb-0 lg:max-w-2xl">
                   {children}
                 </div>
               </div>
             </ScrollArea>
           </div>
         </div>
+        </CommandPaletteProvider>
+        </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

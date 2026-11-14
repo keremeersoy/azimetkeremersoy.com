@@ -3,7 +3,7 @@ import MenuContent from "./menu-content";
 
 const Sidebar = () => {
   return (
-    <MenuContent className="w-96 h-full bg-background lg:flex hidden p-4 text-sm lg:flex-col lg:border-r" />
+    <MenuContent className="hidden h-full w-64 shrink-0 flex-col border-r bg-background p-4 lg:flex" />
   );
 };
 

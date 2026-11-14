@@ -7,9 +7,11 @@ import { Menu } from "lucide-react";
 import MenuContent from "./menu-content";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { DialogTitle } from "@radix-ui/react-dialog"; // DialogTitle'ı import ediyoruz
+import { DialogTitle } from "@radix-ui/react-dialog";
+import { useLang } from "@/lib/i18n";
 
 const Navbar = () => {
+  const { t } = useLang();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => setIsOpen(!isOpen);
@@ -20,14 +22,14 @@ const Navbar = () => {
       <div className="flex justify-between w-full max-w-5xl mx-auto px-4 items-center">
         <Link href="/" className="inline-flex items-center gap-2 p-2 text-xs">
           <Avatar className="w-8 h-8">
-            <AvatarImage src="/cv_photo.png" alt="Azimet Kerem Ersoy" />
+            <AvatarImage src="/avatar.jpg" alt="Azimet Kerem Ersoy" />
             <AvatarFallback>KE</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
             <span className="font-semibold tracking-tight">
               Azimet Kerem Ersoy
             </span>
-            <span className="text-gray-600">Web Developer</span>
+            <span className="text-muted-foreground">{t.role}</span>
           </div>
         </Link>
 

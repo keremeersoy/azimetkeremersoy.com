@@ -6,76 +6,57 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+const base =
+  "flex items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-sm transition-colors";
+
 const NavigationLink = ({
   href,
   label,
   icon,
-  shortcutNumber,
   onClick,
 }: {
   href: string;
   label: string;
   icon?: React.ReactElement;
-  shortcutNumber?: number;
   onClick?: () => void;
 }) => {
   const pathname = usePathname();
   const iconCmp = icon ?? <AtSignIcon size={16} />;
 
-  const isInternal = href.startsWith("/");
-  if (!isInternal) {
+  if (!href.startsWith("/")) {
     return (
       <a
-        key={href}
         href={href}
-        target="_blank"
+        target={href.startsWith("mailto:") ? undefined : "_blank"}
         rel="noopener noreferrer"
-        className="flex items-center justify-between gap-2 rounded-lg p-2 hover:bg-accent hover:text-accent-foreground"
+        className={cn(base, "text-muted-foreground hover:bg-muted hover:text-foreground")}
         onClick={onClick}
       >
-        <span className="inline-flex items-center gap-2 font-medium">
+        <span className="inline-flex items-center gap-2.5">
           {iconCmp} {label}
         </span>
-        <ArrowUpRightIcon size={16} />
+        <ArrowUpRightIcon size={14} />
       </a>
     );
   }
 
-  let isActive = false;
-  if (pathname?.length > 0) {
-    const splittedPathname = pathname.split("/");
-    const currentPathname = splittedPathname[1] ?? "";
-    isActive = currentPathname === href.split("/")[1];
-  }
+  const isActive = href === "/" ? pathname === "/" : pathname?.startsWith(href);
 
   return (
     <Link
-      key={href}
       href={href}
+      aria-current={isActive ? "page" : undefined}
       className={cn(
-        "group flex items-center justify-between rounded-lg p-2",
-        isActive ? "bg-primary text-primary-foreground" : "hover:bg-accent hover:text-accent-foreground"
+        base,
+        isActive
+          ? "bg-muted font-medium text-foreground"
+          : "text-muted-foreground hover:bg-muted hover:text-foreground"
       )}
       onClick={onClick}
     >
-      <span className="flex items-center gap-2">
-        {iconCmp}
-        <span className={cn("font-medium", isActive && "text-primary-foreground")}>
-          {label}
-        </span>
+      <span className="inline-flex items-center gap-2.5">
+        {iconCmp} {label}
       </span>
-      {shortcutNumber && (
-        <span
-          className={cn(
-            "hidden h-5 w-5 place-content-center rounded border border-border bg-muted text-xs font-medium text-muted-foreground transition-colors duration-200 group-hover:border-accent-foreground/10 lg:grid",
-            isActive &&
-              "border-primary-foreground/20 bg-primary-foreground/20 text-primary-foreground group-hover:border-primary-foreground/20"
-          )}
-          title={`Shortcut key: ${shortcutNumber}`}
-        >
-          {shortcutNumber}
-        </span>
-      )}
     </Link>
   );
 };
